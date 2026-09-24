@@ -3,123 +3,142 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MyAmerica.WTF Holdings</title>
+<title>My America holdings</title>
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
   body { margin: 0; background: #0B0F14; color: #F4F6F8; font-family: Calibri, "Segoe UI", sans-serif; }
   button { cursor: pointer; font: inherit; }
-  a { color: inherit; text-decoration: none; }
-  .tabs { display: flex; gap: .5rem; padding: 1rem 1rem 0; }
-  .tabs button { border: 1px solid #232A34; background: #11161D; color: #F4F6F8; border-radius: 6px; padding: .5rem .75rem; }
-  .tabs button.on { background: #F5D76E; color: #1A1400; border-color: #F5D76E; }
-  main { max-width: 72rem; margin: 0 auto; padding: 1rem 1rem 2rem; }
-  .eyebrow { font-family: Consolas, ui-monospace, monospace; letter-spacing: .18em; font-size: .72rem; color: #22C55E; }
-  h1 { margin: .2rem 0 .4rem; font-size: 1.8rem; }
-  .muted { color: #8893A2; font-size: .95rem; }
-  h2 { margin: 1.4rem 0 .4rem; font-size: .9rem; }
-  .green { color: #22C55E; } .gold { color: #F5D76E; } .red { color: #EF4444; }
-  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .45rem; }
-  li a, li.down { display: block; background: #11161D; border-radius: 8px; padding: .7rem .8rem; }
-  li a.up { border: 1px solid #22C55E; }
-  li a.soon { border: 1px solid #F5D76E; }
-  li.down { border: 1px solid #EF4444; font-size: .92rem; }
-  .sub { color: #8893A2; font-size: .85rem; }
-  .deck { display: grid; gap: 1rem; }
-  @media (min-width: 900px) { .deck { grid-template-columns: 1fr .9fr; } }
-  .card { border-radius: 8px; background: #11161D; padding: .55rem .7rem; margin-top: .4rem; }
-  .card b { display: block; color: #F4F6F8; }
-  .card.green { border: 1px solid #22C55E; color: #22C55E; }
-  .card.red { border: 1px solid #EF4444; color: #EF4444; }
-  .card.gold { border: 1px solid #F5D76E; color: #F5D76E; }
-  img.map { width: 100%; border: 1px solid #232A34; border-radius: 8px; background: #0B0F14; }
-  nav.pager { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
-  nav.pager button { background: #11161D; color: #F4F6F8; border: 1px solid #232A34; border-radius: 6px; padding: .5rem 1rem; }
-  nav.pager button.next { border-color: #F5D76E; color: #F5D76E; }
-  nav.pager button:disabled { opacity: .4; }
-  .hero { text-align: center; }
-  .hero img.logo { width: min(92vw, 920px); }
-  .frame { margin: .6rem; border: 1px solid #F5D76E; border-radius: 12px; padding: 4px; background: #1A1400; box-shadow: 0 0 48px rgba(245,215,110,.28); }
+  header { padding: 1rem 1rem 0; max-width: 72rem; margin: 0 auto; }
+  header img { width: min(92vw, 640px); display: block; }
+  h1 { margin: .3rem 0 .2rem; font-size: 1.7rem; }
+  .muted { color: #8893A2; }
+  .banner { margin: .8rem 0; padding: .7rem .8rem; border-radius: 8px; background: #2a1212; border: 1px solid #EF4444; }
+  .filters { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0; }
+  .filters button, .layers button { border: 1px solid #232A34; background: #11161D; color: #F4F6F8; border-radius: 6px; padding: .4rem .7rem; }
+  .filters button.on, .layers button.on { background: #F5D76E; color: #1A1400; border-color: #F5D76E; }
+  main { max-width: 72rem; margin: 0 auto; padding: 0 1rem 2rem; display: grid; gap: 1rem; }
+  @media (min-width: 900px) { main { grid-template-columns: 1.1fr .9fr; align-items: start; } }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+  li { background: #11161D; border-radius: 8px; padding: .55rem .7rem; border: 1px solid #232A34; }
+  li.owned { border-color: #22C55E; }
+  li.open { border-color: #F5D76E; }
+  li.taken { border-color: #EF4444; }
+  li b { display: block; }
+  .tag { font-size: .75rem; letter-spacing: .04em; }
+  .owned .tag { color: #22C55E; }
+  .open .tag { color: #F5D76E; }
+  .taken .tag { color: #EF4444; }
+  img.map { width: 100%; border-radius: 8px; border: 1px solid #232A34; background: #0B0F14; }
+  input { width: 100%; margin: .4rem 0 .6rem; padding: .55rem .7rem; border-radius: 8px; border: 1px solid #232A34; background: #11161D; color: #F4F6F8; }
   .cap { font-family: Consolas, ui-monospace, monospace; font-size: .72rem; color: #8893A2; }
 </style>
 </head>
 <body>
-<div class="tabs">
-  <button id="tab-live" class="on" type="button">Live now</button>
-  <button id="tab-deck" type="button">Holdings deck</button>
-</div>
-<main id="live">
-  <p class="eyebrow">CHECKED 2026-09-24</p>
-  <h1>Sites answering</h1>
-  <p class="muted">8 with a real page. 10 coming-soon pages. 2 not loading.</p>
-  <h2 class="green">Up</h2>
-  <ul id="up"></ul>
-  <h2 class="gold">Coming soon pages</h2>
-  <ul id="soon"></ul>
-  <h2 class="red">Not loading</h2>
-  <ul id="down"></ul>
-</main>
-<main id="deck" hidden>
-  <div id="slide"></div>
-  <nav class="pager">
-    <button id="back" type="button">Back</button>
-    <span class="cap" id="count"></span>
-    <button id="next" class="next" type="button">Next</button>
-  </nav>
+<header>
+  <img src="maps/logo-myamerica-crop.png" alt="MyAmerica.WTF" />
+  <h1>My America domain holdings</h1>
+  <p class="muted">Public project map only. Green is on our list. Gold is still open. Red means the registry shows that open name is now registered.</p>
+  <p class="cap" id="checked">Registration check has not run yet.</p>
+  <div id="alert"></div>
+  <div class="layers" id="layers"></div>
+  <div class="filters" id="filters"></div>
+</header>
+<main>
+  <section>
+    <input id="q" type="search" placeholder="Find a name" />
+    <ul id="list"></ul>
+  </section>
+  <section>
+    <img id="map" class="map" alt="Holdings map" src="maps/map_06_full.png" />
+    <p class="cap" id="mapcap">Owned states and capitals, zones still open.</p>
+  </section>
 </main>
 <script>
-const LIVE = [
-  ["https://myamerica.wtf/","MyAmerica.WTF"],
-  ["https://myway.wtf/","Mari's Case Assistant"],
-  ["https://myflwater.wtf/","Data Centers: The Real Numbers"],
-  ["https://grokbothotspot.com/","Grok Bot Hotspot"],
-  ["https://grokbothotspot.wtf/","Grok Bot Hotspot — stories from the box"],
-  ["https://zay.wtf/","Rowdy's Idea"],
-  ["https://nattymctatty.wtf/","Page title: Offline"],
-  ["https://topic-board.vercel.app/","Topic board"]
-];
-const SOON = ["https://myselfandai.wtf/","https://mydeland.wtf/","https://mylocalhookups.wtf/","https://myjobbots.wtf/","https://mycountry.wtf/","https://mylakehelen.wtf/","https://lakehelen.wtf/","https://justwondering.wtf/","https://captcasey.wtf/","https://botspot.wtf/"];
-const DOWN = [["https://askai.wtf/","402 Payment Required"],["https://ma-topic-board.vercel.app/","402 Payment Required"]];
-function host(u){ return u.replace("https://",""); }
-document.getElementById("up").innerHTML = LIVE.map(([u,t]) => `<li><a class="up" href="${u}" target="_blank" rel="noreferrer"><b>${host(u)}</b><div class="sub">${t}</div></a></li>`).join("");
-document.getElementById("soon").innerHTML = SOON.map(u => `<li><a class="soon" href="${u}" target="_blank" rel="noreferrer">${host(u)}</a></li>`).join("");
-document.getElementById("down").innerHTML = DOWN.map(([u,n]) => `<li class="down"><div>${host(u)}</div><div class="red">${n}</div></li>`).join("");
+const MAPS = {
+  all: ["maps/map_06_full.png", "Owned states and capitals, zones still open."],
+  peak: ["maps/map_01_peak.png", "myamerica.wtf"],
+  zones: ["maps/map_02_zones.png", "Five zone names. Still open."],
+  states: ["maps/map_03_states.png", "Fifty state names on the list."],
+  capitals: ["maps/map_04_capitals.png", "Capital names. One still open."]
+};
+let holdings = null;
+let status = { domains: {} };
+let layer = "all";
+let filter = "all";
 
-const SLIDES = [
-  {eyebrow:"GEOGRAPHIC HOLDINGS", title:"The pyramid starts at MyAmerica.wtf", body:"One brand at the peak. Five zones. Fifty states. Capitals. Then cities by population. Green is owned. Red is still to acquire.", map:"maps/map_01_peak.png", cap:"MAP 01 · gold star = MyAmerica.wtf", cards:[["myamerica.wtf","PEAK · OWNED","green"],["5 zone domains","PURCHASING NOW","red"],["50 state domains","OWNED","green"],["49 / 50 capitals","1 CAPITAL OPEN","green"],["Cities by population","GREEN HELD · RED OPEN","gold"]]},
-  {eyebrow:"LAYER 02 · FIVE ZONES", title:"Ten states in each zone", body:"Zone domains are being purchased now. They sit under MyAmerica.wtf and above the fifty state names.", map:"maps/map_02_zones.png", cap:"MAP 02 · zone wash + red pentagons", cards:[["myzoneone.wtf","Northeast · ME NH VT MA RI CT NY NJ PA DE","red"],["myzonetwo.wtf","Southeast · MD VA WV NC SC GA FL AL MS TN","red"],["myzonethree.wtf","Heartland · KY OH IN MI IL WI MN IA MO AR","red"],["myzonefour.wtf","Plains · LA TX OK KS NE SD ND MT WY CO","red"],["myzonefive.wtf","West · NM AZ UT NV ID WA OR CA HI AK","red"]]},
-  {eyebrow:"LAYER 03 · FIFTY STATES", title:"Every state is an owned position", body:"Pattern: my + state + .wtf. myflorida.wtf · mygeorgia.wtf · myalabama.wtf · mywyoming.wtf", map:"maps/map_03_states.png", cap:"MAP 03 · green circle on every state", cards:[["50 / 50","State domains owned","green"],["mylouissana.wtf","Louisiana token on file","gold"],["mywyoming.wtf","Wyoming added","green"]]},
-  {eyebrow:"LAYER 04 · CAPITALS", title:"Forty-nine capitals on the sheet", body:"Red on this layer is only Boise. Montana uses helens. New Mexico uses santefe. North Dakota uses bismark. Louisiana uses batonrouge.", map:"maps/map_04_capitals.png", cap:"MAP 04 · capital stars", cards:[["49","Capitals owned","green"],["1","Idaho capital open · myboise.wtf","red"]]},
-  {eyebrow:"LAYER 05 · POPULATION CITIES", title:"Highest. Next. Next after that.", body:"Square = rank 1. Diamond = rank 2. Triangle = rank 3. Green is on the list. Red is still to acquire.", map:"maps/map_05_cities.png", cap:"MAP 05 · city symbols", cards:[["35 / 50","Rank 1 cities owned","green"],["13 / 50","Rank 2 cities owned","green"],["6 / 50","Rank 3 cities owned","green"],["15 · 37 · 44","Open boxes still empty","red"]]},
-  {eyebrow:"FULL STACK", title:"What the map holds now", body:"Tickets and SSL numbers come later. This view is geography only.", map:"maps/map_06_full.png", cap:"MAP 06 · every prior symbol stays", cards:[["myamerica.wtf","Peak · owned","green"],["myzoneone.wtf – myzonefive.wtf","5 zone names · purchasing now","red"],["50 state domains","Including Wyoming and Louisiana","green"],["49 capital domains","Idaho / Boise still red","green"],["35 · 13 · 6","Rank 1 / 2 / 3 cities owned","gold"]]},
-  {eyebrow:"SIMULATION", title:"Five hundred nodes", body:"Not a live Domain List count. Every node on this map is drawn as owned.", map:"maps/map_07_sim500.png", cap:"SIM MAP · 500 owned nodes", cards:[["500","Simulated nodes","green"],["100%","Marked owned","green"]]},
-  {eyebrow:"SIMULATION", title:"One thousand nodes", body:"Same canvas. Density doubles. All marks read as owned.", map:"maps/map_08_sim1000.png", cap:"SIM MAP · 1,000 owned nodes", cards:[["1,000","Simulated nodes","green"],["100%","Marked owned","green"]]},
-  {eyebrow:"SIMULATION", title:"Two thousand nodes", body:"Full simulated mesh. Next slide drops the notes.", map:"maps/map_09_sim2000.png", cap:"SIM MAP · 2,000 owned nodes", cards:[["2,000","Simulated nodes","green"],["100%","Marked owned","green"]]},
-  {hero:true, map:"maps/map_10_hero2000.png"}
-];
-let i = 0;
-function render() {
-  const s = SLIDES[i];
-  const el = document.getElementById("slide");
-  document.getElementById("count").textContent = String(i+1).padStart(2,"0") + " / " + String(SLIDES.length).padStart(2,"0");
-  document.getElementById("back").disabled = i === 0;
-  document.getElementById("next").disabled = i === SLIDES.length - 1;
-  if (s.hero) {
-    el.innerHTML = `<div class="hero"><img class="logo" src="maps/logo-myamerica-crop.png" alt="MyAmerica.WTF" /><p class="gold" style="font-style:italic">In the business of doing good shit.</p><div class="frame"><img class="map" src="${s.map}" alt="Two thousand owned nodes" /></div></div>`;
-    return;
-  }
-  el.innerHTML = `<div class="deck"><section><p class="cap" style="color:#F5D76E">${s.eyebrow}</p><h1>${s.title}</h1><p class="muted">${s.body}</p>${s.cards.map(c => `<div class="card ${c[2]}"><b>${c[0]}</b><span>${c[1]}</span></div>`).join("")}</section><section><img class="map" src="${s.map}" alt="" /><p class="cap">${s.cap}</p></section></div>`;
+function liveState(domain, role) {
+  if (role === "owned") return "owned";
+  const hit = (status.domains || {})[domain];
+  if (hit && hit.state === "registered") return "taken";
+  return "open";
 }
-document.getElementById("back").onclick = () => { if (i) { i--; render(); } };
-document.getElementById("next").onclick = () => { if (i < SLIDES.length-1) { i++; render(); } };
-document.getElementById("tab-live").onclick = () => { document.getElementById("live").hidden = false; document.getElementById("deck").hidden = true; document.getElementById("tab-live").classList.add("on"); document.getElementById("tab-deck").classList.remove("on"); };
-document.getElementById("tab-deck").onclick = () => { document.getElementById("live").hidden = true; document.getElementById("deck").hidden = false; document.getElementById("tab-deck").classList.add("on"); document.getElementById("tab-live").classList.remove("on"); render(); };
-addEventListener("keydown", (e) => {
-  if (document.getElementById("deck").hidden) return;
-  if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); if (i < SLIDES.length-1) { i++; render(); } }
-  if (e.key === "ArrowLeft") { if (i) { i--; render(); } }
-});
-render();
+function label(state) {
+  if (state === "owned") return "On our list";
+  if (state === "taken") return "Registered by someone else";
+  return "Still open";
+}
+function rows() {
+  const out = [];
+  out.push({ layer: "peak", name: "My America", domain: holdings.peak.domain, state: liveState(holdings.peak.domain, holdings.peak.role) });
+  for (const z of holdings.zones) {
+    out.push({ layer: "zones", name: z.label + " · " + z.states, domain: z.domain, state: liveState(z.domain, z.role) });
+  }
+  for (const s of holdings.states) {
+    out.push({ layer: "states", name: s.name, domain: s.domain, state: liveState(s.domain, s.role) });
+    if (s.capitalDomain) {
+      out.push({ layer: "capitals", name: s.name + " capital", domain: s.capitalDomain, state: liveState(s.capitalDomain, s.capitalRole) });
+    }
+  }
+  return out;
+}
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const items = rows().filter(r => (layer === "all" || r.layer === layer) && (filter === "all" || r.state === filter) && (!q || (r.domain + r.name).toLowerCase().includes(q)));
+  document.getElementById("list").innerHTML = items.map(r => `<li class="${r.state}"><b>${r.domain}</b><span class="tag">${label(r.state)}</span><div class="muted">${r.name}</div></li>`).join("") || `<li>Nothing in this view.</li>`;
+  const map = MAPS[layer] || MAPS.all;
+  document.getElementById("map").src = map[0];
+  document.getElementById("mapcap").textContent = map[1];
+  const taken = rows().filter(r => r.state === "taken");
+  document.getElementById("alert").innerHTML = taken.length ? `<div class="banner"><b>${taken.length} open name${taken.length===1?"":"s"} now registered.</b><div>${taken.map(t => t.domain).join(", ")}</div><div class="muted">If you bought it, it still needs to be marked owned. If you did not, someone else got there first.</div></div>` : "";
+}
+function chip(parent, id, text, group) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.textContent = text;
+  b.dataset.id = id;
+  b.onclick = () => {
+    if (group === "layer") layer = id; else filter = id;
+    for (const el of parent.children) el.classList.toggle("on", el.dataset.id === id);
+    render();
+  };
+  parent.appendChild(b);
+  return b;
+}
+async function boot() {
+  const [h, s] = await Promise.all([
+    fetch("holdings.json", { cache: "no-store" }).then(r => r.json()),
+    fetch("status.json", { cache: "no-store" }).then(r => r.json()).catch(() => ({ domains: {} }))
+  ]);
+  holdings = h;
+  status = s || { domains: {} };
+  document.getElementById("checked").textContent = status.checked_at
+    ? "Last registry check " + status.checked_at + ". Runs about once a day."
+    : "Registry check has not run yet. It runs about once a day.";
+  const layers = document.getElementById("layers");
+  const filters = document.getElementById("filters");
+  [["all","All layers"],["peak","Peak"],["zones","Zones"],["states","States"],["capitals","Capitals"]].forEach(([id, text], i) => {
+    const b = chip(layers, id, text, "layer");
+    if (i === 0) b.classList.add("on");
+  });
+  [["all","Any standing"],["owned","On our list"],["open","Still open"],["taken","Registered"]].forEach(([id, text], i) => {
+    const b = chip(filters, id, text, "filter");
+    if (i === 0) b.classList.add("on");
+  });
+  document.getElementById("q").addEventListener("input", render);
+  render();
+}
+boot();
 </script>
 </body>
 </html>

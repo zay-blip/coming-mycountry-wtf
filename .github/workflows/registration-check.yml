@@ -1,0 +1,34 @@
+name: registration-check
+on:
+  schedule:
+    # Once a day, 14:15 UTC
+    - cron: "15 14 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ask the registry about names still open
+        run: python3 scripts/rdap_check.py
+      - name: Save the result on the site
+        run: |
+          git config user.name "zay-blip"
+          git config user.email "298122409+zay-blip@users.noreply.github.com"
+          git add status.json
+          if git diff --cached --quiet; then
+            echo "no status change"
+          else
+            git commit -m "Daily registration check"
+            git push
+          fi
+      - name: Open one note if a name was registered
+        if: hashFiles('newly_registered.txt') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          names=$(cat newly_registered.txt)
+          gh issue create --title "A My America name was registered" --body "$(printf 'These names were still on the open list and the registry now shows them registered.\n\n%s\n\nIf you bought one, say so and it will be marked owned. If you did not, someone else got there first.\n\nNo personal sites are listed here. This check is only the My America names still marked open.' "$names")"
