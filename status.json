@@ -1,12 +1,7 @@
 {
-  "checked_at": "2026-09-24T22:50:00Z",
+  "checked_at": "2026-09-24T23:50:00Z",
   "lookup": "ICANN RDAP at rdap.identitydigital.services",
-  "paused": false,
-  "domains": {
-    "myboise.wtf": {
-      "state": "available",
-      "code": 404
-    }
-  },
+  "paused": true,
+  "domains": {},
   "newly_registered": []
 }
