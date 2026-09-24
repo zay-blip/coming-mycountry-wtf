@@ -1,28 +1,8 @@
 {
-  "checked_at": "2026-09-24T18:10:30Z",
+  "checked_at": "2026-09-24T22:50:00Z",
   "lookup": "ICANN RDAP at rdap.identitydigital.services",
   "paused": false,
   "domains": {
-    "myzoneone.wtf": {
-      "state": "available",
-      "code": 404
-    },
-    "myzonetwo.wtf": {
-      "state": "available",
-      "code": 404
-    },
-    "myzonethree.wtf": {
-      "state": "available",
-      "code": 404
-    },
-    "myzonefour.wtf": {
-      "state": "available",
-      "code": 404
-    },
-    "myzonefive.wtf": {
-      "state": "available",
-      "code": 404
-    },
     "myboise.wtf": {
       "state": "available",
       "code": 404
