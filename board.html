@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My America holdings deck</title>
+<style>
+  :root { color-scheme: dark; --bg:#0B0F14; --card:#11161D; --line:#232A34; --text:#F4F6F8; --muted:#8893A2; --green:#22C55E; --red:#EF4444; --gold:#F5D76E; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: Calibri, "Segoe UI", sans-serif; }
+  a { color: var(--gold); }
+  .top { position: sticky; top: 0; z-index: 20; background: #0B0F14f2; border-bottom: 1px solid var(--line); padding: .55rem .8rem; }
+  .top nav { display: flex; flex-wrap: wrap; gap: .35rem; max-width: 88rem; margin: 0 auto; }
+  .top a { display: inline-block; text-decoration: none; color: var(--text); border: 1px solid var(--line); background: var(--card); border-radius: 6px; padding: .35rem .65rem; font-size: .92rem; }
+  .top a.need { border-color: var(--red); color: #fecaca; }
+  header, section, footer { max-width: 88rem; margin: 0 auto; padding: 1rem .8rem 1.2rem; }
+  header img { width: min(92vw, 360px); display: block; }
+  .kicker { color: var(--gold); font-family: Consolas, ui-monospace, monospace; letter-spacing: .14em; font-size: .78rem; font-weight: 700; }
+  h1, h2 { margin: .2rem 0 .4rem; }
+  .muted { color: var(--muted); }
+  .grid { display: grid; gap: 1rem; }
+  @media (min-width: 980px) { .grid.twocol { grid-template-columns: 1.05fr .95fr; align-items: start; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: .9rem; }
+  .needbox { border-color: var(--red); background: #1a0d0d; }
+  .own { border-color: var(--green); }
+  .open { border-color: var(--gold); }
+  .pyramid { display: grid; gap: .45rem; justify-items: center; padding: .4rem 0 0; }
+  .tier { text-align: center; border-radius: 8px; padding: .55rem .4rem .45rem; background: #0B0F14; border: 1.5px solid var(--green); }
+  .tier.open { border-color: var(--gold); }
+  .tier.need { border-color: var(--red); }
+  .tier b { display: block; font-size: 1.02rem; }
+  .tier small { color: var(--muted); }
+  .t1 { width: 42%; } .t2 { width: 56%; } .t3 { width: 70%; } .t4 { width: 84%; } .t5 { width: 100%; }
+  .buy { font-size: clamp(1.6rem, 5vw, 2.6rem); margin: .2rem 0; color: #fecaca; word-break: break-word; }
+  img.map { width: 100%; border-radius: 8px; border: 1px solid var(--line); background: #0B0F14; }
+  .zones { display: grid; gap: .5rem; }
+  .chip b { display: block; } .chip small { color: var(--muted); }
+  .list { display: grid; gap: .35rem; }
+  @media (min-width: 800px) { .list.states { grid-template-columns: 1fr 1fr; } }
+  .row { background: #0B0F14; border: 1px solid var(--line); border-radius: 8px; padding: .5rem .65rem; }
+  .row.own { border-color: var(--green); } .row.need { border-color: var(--red); }
+  .row b { display: block; }
+  .legend span { display: inline-block; margin-right: .8rem; }
+  .dot { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin-right: .25rem; vertical-align: middle; }
+  .g { background: var(--green); } .r { background: var(--red); } .y { background: var(--gold); }
+</style>
+</head>
+<body>
+<div class="top">
+  <nav>
+    <a href="#pyramid">Pyramid</a>
+    <a class="need" href="#next">Buy next</a>
+    <a href="#zones">Zones</a>
+    <a href="#states">States</a>
+    <a href="#capitals">Capitals</a>
+    <a href="#cities">Cities</a>
+    <a href="#map">Full map</a>
+    <a href="#list">List</a>
+  </nav>
+</div>
+<header>
+  <img src="maps/logo-myamerica-crop.png" alt="MyAmerica.WTF" />
+  <p class="kicker">MYAMERICA.WTF · DOMAIN PORTFOLIO OF ACQUIRED POSITIONS</p>
+  <h1>Holdings deck</h1>
+  <p class="muted">How the stack works. Green is already on the Namecheap list. Red is the next buy. Gold is the peak brand.</p>
+  <p class="legend"><span><i class="dot y"></i>peak</span><span><i class="dot g"></i>owned</span><span><i class="dot r"></i>buy this</span></p>
+</header>
+<section id="next">
+  <div class="card needbox">
+    <p class="kicker">BUY NEXT · ONLY OPEN GEOGRAPHIC NAME ON THE SHEET</p>
+    <h2 class="buy">myboise.wtf</h2>
+    <p>Idaho capital. State row <b>myidaho.wtf</b> is already owned. Capital cell is empty. Registry check on this page still shows the name available.</p>
+    <p class="muted">Do not invent city names to fill empty population boxes. Those boxes stay empty until that exact city token is on the acquired list.</p>
+  </div>
+</section>
+<section id="pyramid">
+  <div class="grid twocol">
+    <div class="card">
+      <p class="kicker">01 · GEOGRAPHIC HOLDINGS</p>
+      <h2>The pyramid starts at MyAmerica.wtf</h2>
+      <p class="muted">One brand at the peak. Five zones. Fifty states. Capitals. Then cities by population.</p>
+      <div class="pyramid">
+        <div class="tier t1 open"><b>myamerica.wtf</b><small>PEAK · OWNED</small></div>
+        <div class="tier t2"><b>5 zone domains</b><small>myuszoneone.wtf – myuszonefive.wtf · OWNED</small></div>
+        <div class="tier t3"><b>50 state domains</b><small>my + state + .wtf · OWNED</small></div>
+        <div class="tier t4 need"><b>49 / 50 capitals</b><small>OPEN: myboise.wtf</small></div>
+        <div class="tier t5 open"><b>Cities by population</b><small>empty rank boxes stay empty until bought</small></div>
+      </div>
+    </div>
+    <div>
+      <img class="map" src="maps/map_01_peak.png" alt="Peak map" />
+      <p class="muted">MAP 01 · gold star = myamerica.wtf</p>
+    </div>
+  </div>
+</section>
+<section id="zones">
+  <div class="grid twocol">
+    <div class="card">
+      <p class="kicker">02 · FIVE ZONES</p>
+      <h2>Ten states under each zone</h2>
+      <p class="muted">Zone names sit under the peak and above the fifty state names. US is in the token.</p>
+      <div class="zones">
+        <div class="card own chip"><b>myuszoneone.wtf</b><small>Northeast · ME NH VT MA RI CT NY NJ PA DE · OWNED</small></div>
+        <div class="card own chip"><b>myuszonetwo.wtf</b><small>Southeast · MD VA WV NC SC GA FL AL MS TN · OWNED</small></div>
+        <div class="card own chip"><b>myuszonethree.wtf</b><small>Heartland · KY OH IN MI IL WI MN IA MO AR · OWNED</small></div>
+        <div class="card own chip"><b>myuszonefour.wtf</b><small>Plains · LA TX OK KS NE SD ND MT WY CO · OWNED</small></div>
+        <div class="card own chip"><b>myuszonefive.wtf</b><small>West · NM AZ UT NV ID WA OR CA HI AK · OWNED</small></div>
+      </div>
+    </div>
+    <div>
+      <img class="map" src="maps/map_02_zones.png" alt="Zone map" />
+      <p class="muted">MAP 02 · green pentagons = owned zones</p>
+    </div>
+  </div>
+</section>
+<section id="states">
+  <div class="grid twocol">
+    <div class="card">
+      <p class="kicker">03 · FIFTY STATES</p>
+      <h2>Every state row is owned</h2>
+      <p>Pattern: <b>my + state + .wtf</b></p>
+      <p>Louisiana on the list is <b>mylouisiana.wtf</b>. Wyoming on the list is <b>mywyoming.wtf</b>.</p>
+      <p class="muted">mylouissana.wtf is a leftover misspelling. It is not this layer.</p>
+    </div>
+    <div>
+      <img class="map" src="maps/map_03_states.png" alt="State map" />
+      <p class="muted">MAP 03 · green circle on each state</p>
+    </div>
+  </div>
+</section>
+<section id="capitals">
+  <div class="grid twocol">
+    <div class="card">
+      <p class="kicker">04 · CAPITALS</p>
+      <h2>Forty-nine owned. One open.</h2>
+      <div class="card needbox chip"><b>myboise.wtf</b><small>Idaho capital · BUY THIS</small></div>
+      <p>Correct capital tokens already on the list: <b>myhelena.wtf</b>, <b>mysantafe.wtf</b>, <b>mybismarck.wtf</b>, <b>mybatonrouge.wtf</b>.</p>
+    </div>
+    <div>
+      <img class="map" src="maps/map_04_capitals.png" alt="Capital map" />
+      <p class="muted">MAP 04 · red star is the missing capital</p>
+    </div>
+  </div>
+</section>
+<section id="cities">
+  <div class="grid twocol">
+    <div class="card">
+      <p class="kicker">05 · POPULATION CITIES</p>
+      <h2>This is the next layer after capitals</h2>
+      <p>Column 3 highest city. Column 4 next. Column 5 next after that. Fill a cell only when that exact city token is on the acquired list.</p>
+      <p>The working deck count is 35 / 13 / 6 owned in those three ranks. Empty boxes stay empty. This page will not invent the missing city names.</p>
+      <p class="muted">Lake Helen is treated as the smallest owned city on the Florida row.</p>
+    </div>
+    <div>
+      <img class="map" src="maps/map_05_cities.png" alt="City map" />
+      <p class="muted">MAP 05 · square / diamond / triangle = rank 1 / 2 / 3</p>
+    </div>
+  </div>
+</section>
+<section id="map">
+  <div class="card">
+    <p class="kicker">06 · FULL STACK</p>
+    <h2>What the map holds now</h2>
+    <p>Peak owned. Five US zones owned. Fifty states owned. Forty-nine capitals owned. One capital left to buy. City boxes fill only from the acquired list.</p>
+    <img class="map" src="maps/map_06_full.png" alt="Full holdings map" />
+  </div>
+</section>
+<section id="list">
+  <h2>Full geographic list</h2>
+  <p class="muted">Peak, zones, states, capitals. Open names are red.</p>
+  <div id="rows" class="list states"></div>
+</section>
+<footer>Public page for mycountry.wtf. Desk file stays MyAmerica-Domain-Holdings.pptx. Update holdings.json when a name moves from open to owned.</footer>
+<script>
+const DATA = {
+  peak: { domain: "myamerica.wtf", role: "owned", name: "Peak" },
+  zones: [
+    ["myuszoneone.wtf", "Zone 1 · ME NH VT MA RI CT NY NJ PA DE"],
+    ["myuszonetwo.wtf", "Zone 2 · MD VA WV NC SC GA FL AL MS TN"],
+    ["myuszonethree.wtf", "Zone 3 · KY OH IN MI IL WI MN IA MO AR"],
+    ["myuszonefour.wtf", "Zone 4 · LA TX OK KS NE SD ND MT WY CO"],
+    ["myuszonefive.wtf", "Zone 5 · NM AZ UT NV ID WA OR CA HI AK"]
+  ],
+  open: [["myboise.wtf", "Idaho capital"]]
+};
+function row(domain, name, need) {
+  return `<div class="row ${need ? "need" : "own"}"><b>${domain}</b><small>${need ? "BUY" : "OWNED"} · ${name}</small></div>`;
+}
+const box = document.getElementById("rows");
+const bits = [row(DATA.peak.domain, DATA.peak.name, false)];
+DATA.zones.forEach(z => bits.push(row(z[0], z[1], false)));
+DATA.open.forEach(z => bits.push(row(z[0], z[1], true)));
+fetch("holdings.json?v=20260924-1916", { cache: "no-store" })
+  .then(r => r.json())
+  .then(h => {
+    const more = [];
+    more.push(row(h.peak.domain, "Peak", h.peak.role !== "owned"));
+    h.zones.forEach(z => more.push(row(z.domain, (z.label || "") + " · " + (z.states || ""), z.role !== "owned")));
+    h.states.forEach(s => {
+      more.push(row(s.domain, s.name, s.role !== "owned"));
+      if (s.capitalDomain) more.push(row(s.capitalDomain, s.name + " capital", s.capitalRole !== "owned"));
+    });
+    box.innerHTML = more.join("");
+  })
+  .catch(() => { box.innerHTML = bits.join(""); });
+</script>
+</body>
+</html>
