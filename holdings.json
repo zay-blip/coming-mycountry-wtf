@@ -6,437 +6,88 @@
   },
   "zones": [
     {
-      "domain": "myzoneone.wtf",
+      "domain": "myuszoneone.wtf",
       "label": "Zone 1",
       "states": "ME NH VT MA RI CT NY NJ PA DE",
-      "role": "open"
+      "role": "owned"
     },
     {
-      "domain": "myzonetwo.wtf",
+      "domain": "myuszonetwo.wtf",
       "label": "Zone 2",
       "states": "MD VA WV NC SC GA FL AL MS TN",
-      "role": "open"
+      "role": "owned"
     },
     {
-      "domain": "myzonethree.wtf",
+      "domain": "myuszonethree.wtf",
       "label": "Zone 3",
       "states": "KY OH IN MI IL WI MN IA MO AR",
-      "role": "open"
+      "role": "owned"
     },
     {
-      "domain": "myzonefour.wtf",
+      "domain": "myuszonefour.wtf",
       "label": "Zone 4",
       "states": "LA TX OK KS NE SD ND MT WY CO",
-      "role": "open"
+      "role": "owned"
     },
     {
-      "domain": "myzonefive.wtf",
+      "domain": "myuszonefive.wtf",
       "label": "Zone 5",
       "states": "NM AZ UT NV ID WA OR CA HI AK",
-      "role": "open"
+      "role": "owned"
     }
   ],
   "states": [
-    {
-      "name": "Alabama",
-      "domain": "myalabama.wtf",
-      "role": "owned",
-      "capital": "montgomery",
-      "capitalDomain": "mymontgomery.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Alaska",
-      "domain": "myalaska.wtf",
-      "role": "owned",
-      "capital": "juneau",
-      "capitalDomain": "myjuneau.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Arizona",
-      "domain": "myarizona.wtf",
-      "role": "owned",
-      "capital": "phoenix",
-      "capitalDomain": "myphoenix.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Arkansas",
-      "domain": "myarkansas.wtf",
-      "role": "owned",
-      "capital": "littlerock",
-      "capitalDomain": "mylittlerock.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "California",
-      "domain": "mycalifornia.wtf",
-      "role": "owned",
-      "capital": "sacramento",
-      "capitalDomain": "mysacramento.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Colorado",
-      "domain": "mycolorado.wtf",
-      "role": "owned",
-      "capital": "denver",
-      "capitalDomain": "mydenver.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Connecticut",
-      "domain": "myconnecticut.wtf",
-      "role": "owned",
-      "capital": "hartford",
-      "capitalDomain": "myhartford.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Delaware",
-      "domain": "mydelaware.wtf",
-      "role": "owned",
-      "capital": "dover",
-      "capitalDomain": "mydover.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Florida",
-      "domain": "myflorida.wtf",
-      "role": "owned",
-      "capital": "tallahassee",
-      "capitalDomain": "mytallahassee.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Georgia",
-      "domain": "mygeorgia.wtf",
-      "role": "owned",
-      "capital": "atlanta",
-      "capitalDomain": "myatlanta.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Hawaii",
-      "domain": "myhawaii.wtf",
-      "role": "owned",
-      "capital": "honolulu",
-      "capitalDomain": "myhonolulu.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Idaho",
-      "domain": "myidaho.wtf",
-      "role": "owned",
-      "capital": "",
-      "capitalDomain": "myboise.wtf",
-      "capitalRole": "open"
-    },
-    {
-      "name": "Illinois",
-      "domain": "myillinois.wtf",
-      "role": "owned",
-      "capital": "springfield",
-      "capitalDomain": "myspringfield.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Indiana",
-      "domain": "myindiana.wtf",
-      "role": "owned",
-      "capital": "indianapolis",
-      "capitalDomain": "myindianapolis.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Iowa",
-      "domain": "myiowa.wtf",
-      "role": "owned",
-      "capital": "desmoines",
-      "capitalDomain": "mydesmoines.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Kansas",
-      "domain": "mykansas.wtf",
-      "role": "owned",
-      "capital": "topeka",
-      "capitalDomain": "mytopeka.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Kentucky",
-      "domain": "mykentucky.wtf",
-      "role": "owned",
-      "capital": "frankfort",
-      "capitalDomain": "myfrankfort.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Louisiana",
-      "domain": "mylouissana.wtf",
-      "role": "owned",
-      "capital": "batonrouge",
-      "capitalDomain": "mybatonrouge.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Maine",
-      "domain": "mymaine.wtf",
-      "role": "owned",
-      "capital": "augusta",
-      "capitalDomain": "myaugusta.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Maryland",
-      "domain": "mymaryland.wtf",
-      "role": "owned",
-      "capital": "annapolis",
-      "capitalDomain": "myannapolis.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Massachusetts",
-      "domain": "mymassachusetts.wtf",
-      "role": "owned",
-      "capital": "boston",
-      "capitalDomain": "myboston.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Michigan",
-      "domain": "mymichigan.wtf",
-      "role": "owned",
-      "capital": "lansing",
-      "capitalDomain": "mylansing.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Minnesota",
-      "domain": "myminnesota.wtf",
-      "role": "owned",
-      "capital": "saintpaul",
-      "capitalDomain": "mysaintpaul.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Mississippi",
-      "domain": "mymississippi.wtf",
-      "role": "owned",
-      "capital": "jackson",
-      "capitalDomain": "myjackson.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Missouri",
-      "domain": "mymissouri.wtf",
-      "role": "owned",
-      "capital": "jeffersoncity",
-      "capitalDomain": "myjeffersoncity.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Montana",
-      "domain": "mymontana.wtf",
-      "role": "owned",
-      "capital": "helens",
-      "capitalDomain": "myhelens.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Nebraska",
-      "domain": "mynebraska.wtf",
-      "role": "owned",
-      "capital": "lincoln",
-      "capitalDomain": "mylincoln.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Nevada",
-      "domain": "mynevada.wtf",
-      "role": "owned",
-      "capital": "carsoncity",
-      "capitalDomain": "mycarsoncity.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "New Hampshire",
-      "domain": "mynewhampshire.wtf",
-      "role": "owned",
-      "capital": "concord",
-      "capitalDomain": "myconcord.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "New Jersey",
-      "domain": "mynewjersey.wtf",
-      "role": "owned",
-      "capital": "trenton",
-      "capitalDomain": "mytrenton.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "New Mexico",
-      "domain": "mynewmexico.wtf",
-      "role": "owned",
-      "capital": "santefe",
-      "capitalDomain": "mysantefe.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "New York",
-      "domain": "mynewyork.wtf",
-      "role": "owned",
-      "capital": "albany",
-      "capitalDomain": "myalbany.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "North Carolina",
-      "domain": "mynorthcarolina.wtf",
-      "role": "owned",
-      "capital": "raleigh",
-      "capitalDomain": "myraleigh.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "North Dakota",
-      "domain": "mynorthdakota.wtf",
-      "role": "owned",
-      "capital": "bismark",
-      "capitalDomain": "mybismark.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Ohio",
-      "domain": "myohio.wtf",
-      "role": "owned",
-      "capital": "columbus",
-      "capitalDomain": "mycolumbus.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Oklahoma",
-      "domain": "myoklahoma.wtf",
-      "role": "owned",
-      "capital": "oklahomacity",
-      "capitalDomain": "myoklahomacity.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Oregon",
-      "domain": "myoregon.wtf",
-      "role": "owned",
-      "capital": "salem",
-      "capitalDomain": "mysalem.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Pennsylvania",
-      "domain": "mypennsylvania.wtf",
-      "role": "owned",
-      "capital": "harrisburg",
-      "capitalDomain": "myharrisburg.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Rhode Island",
-      "domain": "myrhodeisland.wtf",
-      "role": "owned",
-      "capital": "providence",
-      "capitalDomain": "myprovidence.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "South Carolina",
-      "domain": "mysouthcarolina.wtf",
-      "role": "owned",
-      "capital": "columbia",
-      "capitalDomain": "mycolumbia.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "South Dakota",
-      "domain": "mysouthdakota.wtf",
-      "role": "owned",
-      "capital": "pierre",
-      "capitalDomain": "mypierre.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Tennessee",
-      "domain": "mytennessee.wtf",
-      "role": "owned",
-      "capital": "nashville",
-      "capitalDomain": "mynashville.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Texas",
-      "domain": "mytexas.wtf",
-      "role": "owned",
-      "capital": "austin",
-      "capitalDomain": "myaustin.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Utah",
-      "domain": "myutah.wtf",
-      "role": "owned",
-      "capital": "saltlakecity",
-      "capitalDomain": "mysaltlakecity.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Vermont",
-      "domain": "myvermont.wtf",
-      "role": "owned",
-      "capital": "montpelier",
-      "capitalDomain": "mymontpelier.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Virginia",
-      "domain": "myvirginia.wtf",
-      "role": "owned",
-      "capital": "richmond",
-      "capitalDomain": "myrichmond.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Washington",
-      "domain": "mywashington.wtf",
-      "role": "owned",
-      "capital": "olympia",
-      "capitalDomain": "myolympia.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "West Virginia",
-      "domain": "mywestvirginia.wtf",
-      "role": "owned",
-      "capital": "charleston",
-      "capitalDomain": "mycharleston.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Wisconsin",
-      "domain": "mywisconsin.wtf",
-      "role": "owned",
-      "capital": "madison",
-      "capitalDomain": "mymadison.wtf",
-      "capitalRole": "owned"
-    },
-    {
-      "name": "Wyoming",
-      "domain": "mywyoming.wtf",
-      "role": "owned",
-      "capital": "cheyenne",
-      "capitalDomain": "mycheyenne.wtf",
-      "capitalRole": "owned"
-    }
+    {"name": "Alabama", "domain": "myalabama.wtf", "role": "owned", "capital": "montgomery", "capitalDomain": "mymontgomery.wtf", "capitalRole": "owned"},
+    {"name": "Alaska", "domain": "myalaska.wtf", "role": "owned", "capital": "juneau", "capitalDomain": "myjuneau.wtf", "capitalRole": "owned"},
+    {"name": "Arizona", "domain": "myarizona.wtf", "role": "owned", "capital": "phoenix", "capitalDomain": "myphoenix.wtf", "capitalRole": "owned"},
+    {"name": "Arkansas", "domain": "myarkansas.wtf", "role": "owned", "capital": "littlerock", "capitalDomain": "mylittlerock.wtf", "capitalRole": "owned"},
+    {"name": "California", "domain": "mycalifornia.wtf", "role": "owned", "capital": "sacramento", "capitalDomain": "mysacramento.wtf", "capitalRole": "owned"},
+    {"name": "Colorado", "domain": "mycolorado.wtf", "role": "owned", "capital": "denver", "capitalDomain": "mydenver.wtf", "capitalRole": "owned"},
+    {"name": "Connecticut", "domain": "myconnecticut.wtf", "role": "owned", "capital": "hartford", "capitalDomain": "myhartford.wtf", "capitalRole": "owned"},
+    {"name": "Delaware", "domain": "mydelaware.wtf", "role": "owned", "capital": "dover", "capitalDomain": "mydover.wtf", "capitalRole": "owned"},
+    {"name": "Florida", "domain": "myflorida.wtf", "role": "owned", "capital": "tallahassee", "capitalDomain": "mytallahassee.wtf", "capitalRole": "owned"},
+    {"name": "Georgia", "domain": "mygeorgia.wtf", "role": "owned", "capital": "atlanta", "capitalDomain": "myatlanta.wtf", "capitalRole": "owned"},
+    {"name": "Hawaii", "domain": "myhawaii.wtf", "role": "owned", "capital": "honolulu", "capitalDomain": "myhonolulu.wtf", "capitalRole": "owned"},
+    {"name": "Idaho", "domain": "myidaho.wtf", "role": "owned", "capital": "", "capitalDomain": "myboise.wtf", "capitalRole": "open"},
+    {"name": "Illinois", "domain": "myillinois.wtf", "role": "owned", "capital": "springfield", "capitalDomain": "myspringfield.wtf", "capitalRole": "owned"},
+    {"name": "Indiana", "domain": "myindiana.wtf", "role": "owned", "capital": "indianapolis", "capitalDomain": "myindianapolis.wtf", "capitalRole": "owned"},
+    {"name": "Iowa", "domain": "myiowa.wtf", "role": "owned", "capital": "desmoines", "capitalDomain": "mydesmoines.wtf", "capitalRole": "owned"},
+    {"name": "Kansas", "domain": "mykansas.wtf", "role": "owned", "capital": "topeka", "capitalDomain": "mytopeka.wtf", "capitalRole": "owned"},
+    {"name": "Kentucky", "domain": "mykentucky.wtf", "role": "owned", "capital": "frankfort", "capitalDomain": "myfrankfort.wtf", "capitalRole": "owned"},
+    {"name": "Louisiana", "domain": "mylouisiana.wtf", "role": "owned", "capital": "batonrouge", "capitalDomain": "mybatonrouge.wtf", "capitalRole": "owned"},
+    {"name": "Maine", "domain": "mymaine.wtf", "role": "owned", "capital": "augusta", "capitalDomain": "myaugusta.wtf", "capitalRole": "owned"},
+    {"name": "Maryland", "domain": "mymaryland.wtf", "role": "owned", "capital": "annapolis", "capitalDomain": "myannapolis.wtf", "capitalRole": "owned"},
+    {"name": "Massachusetts", "domain": "mymassachusetts.wtf", "role": "owned", "capital": "boston", "capitalDomain": "myboston.wtf", "capitalRole": "owned"},
+    {"name": "Michigan", "domain": "mymichigan.wtf", "role": "owned", "capital": "lansing", "capitalDomain": "mylansing.wtf", "capitalRole": "owned"},
+    {"name": "Minnesota", "domain": "myminnesota.wtf", "role": "owned", "capital": "saintpaul", "capitalDomain": "mysaintpaul.wtf", "capitalRole": "owned"},
+    {"name": "Mississippi", "domain": "mymississippi.wtf", "role": "owned", "capital": "jackson", "capitalDomain": "myjackson.wtf", "capitalRole": "owned"},
+    {"name": "Missouri", "domain": "mymissouri.wtf", "role": "owned", "capital": "jeffersoncity", "capitalDomain": "myjeffersoncity.wtf", "capitalRole": "owned"},
+    {"name": "Montana", "domain": "mymontana.wtf", "role": "owned", "capital": "helena", "capitalDomain": "myhelena.wtf", "capitalRole": "owned"},
+    {"name": "Nebraska", "domain": "mynebraska.wtf", "role": "owned", "capital": "lincoln", "capitalDomain": "mylincoln.wtf", "capitalRole": "owned"},
+    {"name": "Nevada", "domain": "mynevada.wtf", "role": "owned", "capital": "carsoncity", "capitalDomain": "mycarsoncity.wtf", "capitalRole": "owned"},
+    {"name": "New Hampshire", "domain": "mynewhampshire.wtf", "role": "owned", "capital": "concord", "capitalDomain": "myconcord.wtf", "capitalRole": "owned"},
+    {"name": "New Jersey", "domain": "mynewjersey.wtf", "role": "owned", "capital": "trenton", "capitalDomain": "mytrenton.wtf", "capitalRole": "owned"},
+    {"name": "New Mexico", "domain": "mynewmexico.wtf", "role": "owned", "capital": "santafe", "capitalDomain": "mysantafe.wtf", "capitalRole": "owned"},
+    {"name": "New York", "domain": "mynewyork.wtf", "role": "owned", "capital": "albany", "capitalDomain": "myalbany.wtf", "capitalRole": "owned"},
+    {"name": "North Carolina", "domain": "mynorthcarolina.wtf", "role": "owned", "capital": "raleigh", "capitalDomain": "myraleigh.wtf", "capitalRole": "owned"},
+    {"name": "North Dakota", "domain": "mynorthdakota.wtf", "role": "owned", "capital": "bismarck", "capitalDomain": "mybismarck.wtf", "capitalRole": "owned"},
+    {"name": "Ohio", "domain": "myohio.wtf", "role": "owned", "capital": "columbus", "capitalDomain": "mycolumbus.wtf", "capitalRole": "owned"},
+    {"name": "Oklahoma", "domain": "myoklahoma.wtf", "role": "owned", "capital": "oklahomacity", "capitalDomain": "myoklahomacity.wtf", "capitalRole": "owned"},
+    {"name": "Oregon", "domain": "myoregon.wtf", "role": "owned", "capital": "salem", "capitalDomain": "mysalem.wtf", "capitalRole": "owned"},
+    {"name": "Pennsylvania", "domain": "mypennsylvania.wtf", "role": "owned", "capital": "harrisburg", "capitalDomain": "myharrisburg.wtf", "capitalRole": "owned"},
+    {"name": "Rhode Island", "domain": "myrhodeisland.wtf", "role": "owned", "capital": "providence", "capitalDomain": "myprovidence.wtf", "capitalRole": "owned"},
+    {"name": "South Carolina", "domain": "mysouthcarolina.wtf", "role": "owned", "capital": "columbia", "capitalDomain": "mycolumbia.wtf", "capitalRole": "owned"},
+    {"name": "South Dakota", "domain": "mysouthdakota.wtf", "role": "owned", "capital": "pierre", "capitalDomain": "mypierre.wtf", "capitalRole": "owned"},
+    {"name": "Tennessee", "domain": "mytennessee.wtf", "role": "owned", "capital": "nashville", "capitalDomain": "mynashville.wtf", "capitalRole": "owned"},
+    {"name": "Texas", "domain": "mytexas.wtf", "role": "owned", "capital": "austin", "capitalDomain": "myaustin.wtf", "capitalRole": "owned"},
+    {"name": "Utah", "domain": "myutah.wtf", "role": "owned", "capital": "saltlakecity", "capitalDomain": "mysaltlakecity.wtf", "capitalRole": "owned"},
+    {"name": "Vermont", "domain": "myvermont.wtf", "role": "owned", "capital": "montpelier", "capitalDomain": "mymontpelier.wtf", "capitalRole": "owned"},
+    {"name": "Virginia", "domain": "myvirginia.wtf", "role": "owned", "capital": "richmond", "capitalDomain": "myrichmond.wtf", "capitalRole": "owned"},
+    {"name": "Washington", "domain": "mywashington.wtf", "role": "owned", "capital": "olympia", "capitalDomain": "myolympia.wtf", "capitalRole": "owned"},
+    {"name": "West Virginia", "domain": "mywestvirginia.wtf", "role": "owned", "capital": "charleston", "capitalDomain": "mycharleston.wtf", "capitalRole": "owned"},
+    {"name": "Wisconsin", "domain": "mywisconsin.wtf", "role": "owned", "capital": "madison", "capitalDomain": "mymadison.wtf", "capitalRole": "owned"},
+    {"name": "Wyoming", "domain": "mywyoming.wtf", "role": "owned", "capital": "cheyenne", "capitalDomain": "mycheyenne.wtf", "capitalRole": "owned"}
   ],
-  "watch": []
+  "watch": [],
+  "updated": "2026-09-24"
 }
